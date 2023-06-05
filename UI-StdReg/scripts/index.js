@@ -7,13 +7,6 @@ async function addDetails(){
    async function save(e){
         e.preventDefault();
 
-        // let arr = [];
-        // var markedCheckbox = document.getElementsByName('ch');  
-        //  for (var checkbox of markedCheckbox) {  
-        //  if (checkbox.checked)  
-        //      arr.push(checkbox.value );
-        //  } 
-
         var detail={
             affilation:document.querySelector("#affilation").value,
             firstName:document.querySelector("#fname").value,
@@ -23,13 +16,9 @@ async function addDetails(){
             mobileNo:document.querySelector("#mobile").value,
             dob:document.querySelector("#dob").value,
             city:document.querySelector("#city").value,
-            // professionalSkills:[]
-        
+           
         };
-        // detail.professionalSkills.push(arr);
-        // alert(detail.professionalSkills);
-
-          
+     
     
             let url=`http://localhost:8080/addDetails`
             let dataPost = (detail)=>{
@@ -92,9 +81,6 @@ async function addDetails(){
              let formData = new FormData();
              formData.append('user-file', userfile, 'user-file.png');
              console.log(formData,"form");
-            
-            //  photoPost(formData);
-           
 
         }).then(err=>{
             console.log(err);
@@ -179,13 +165,6 @@ async function getAll(){
    async function save(e){
         e.preventDefault();
 
-        // let arr = [];
-        // var markedCheckbox = document.getElementsByName('ch');  
-        //  for (var checkbox of markedCheckbox) {  
-        //  if (checkbox.checked)  
-        //      arr.push(checkbox.value );
-        //  } 
-
         var detailup={
             affilation:document.querySelector("#affilation").value,
             firstName:document.querySelector("#fname").value,
@@ -198,10 +177,7 @@ async function getAll(){
             // professionalSkills:[]
         
         };
-        // detail.professionalSkills.push(arr);
-        // alert(detail.professionalSkills);
-
-          
+     
     
             let urlup=`http://localhost:8080/updateDetails`
             let dataPost = (detailup)=>{
@@ -265,8 +241,6 @@ async function getAll(){
              formData.append('user-file', userfile, 'user-file.png');
              console.log(formData,"form");
             
-            //  photoPost(formData);
-           
 
         }).then(err=>{
             console.log(err);
